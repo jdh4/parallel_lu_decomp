@@ -1,0 +1,14 @@
+CXX=mpicxx
+CXXFLAGS=-Ofast -mcpu=power9
+CPPFLAGS=-I/usr/include
+LDFLAGS=-L/usr/lib64
+LDLIBS=-lgsl -lgslcblas
+
+lu: lu.o
+	$(CXX) $(CXXFLAGS) -o lu lu.o $(LDFLAGS) $(LDLIBS)
+
+lu.o: lu.cpp
+	$(CXX) $(CXXFLAGS) $(CPPFLAGS) -c lu.cpp
+
+clean:
+	rm -f lu.o lu
