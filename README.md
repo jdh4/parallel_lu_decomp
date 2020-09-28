@@ -20,4 +20,13 @@ $ make  # change CXXFLGAS
 $ sbatch job.slurm
 ```
 
+## Traverse
+
+```
+$ module purge
+$ module load openmpi/gcc/4.0.4/64
+$ make -f Makefile.traverse
+$ sbatch job.slurm
+```
+
 ![data](https://tigress-web.princeton.edu/~jdh4/lu_decomp_embarr_par_sept28_2020.png)
