@@ -11,12 +11,12 @@ $ make
 $ sbatch job.slurm
 ```
 
-## Perseus
+## Stellar-AMD
 
 ```
 $ module purge
-$ module load intel/19.0/64/19.0.5.281 intel-mpi/intel/2018.3/64
-$ make  # change CXXFLGAS
+$ module load openmpi/gcc/4.1.0
+$ make -f Makefile.stellar-amd
 $ sbatch job.slurm
 ```
 
