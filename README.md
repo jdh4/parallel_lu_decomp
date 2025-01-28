@@ -30,3 +30,20 @@ $ sbatch job.slurm
 ```
 
 ![data](https://tigress-web.princeton.edu/~jdh4/lu_decomp_embarr_par_sept28_2020.png)
+
+
+## Jumping around in memory
+
+```
+import numpy as np
+  
+N = 1_000_000_000
+x = np.random.normal(size=N)
+#ind = np.array(range(N))
+ind = np.random.randint(0, N, size=N)
+
+y = 0
+for i in range(N):
+    y += x[ind[i]]**2
+print(y)
+```
